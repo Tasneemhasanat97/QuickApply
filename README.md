@@ -2,7 +2,7 @@
 
 QuickApply is an application that helps students apply for college programs based on their SAT scores and GPAs. It provides a simple and efficient way to manage student profiles, college information, and program applications.
 
-![Demo Screenshot 1](./screenshots/demo1.png)
+![Demo Screenshot 1](./IMG_QuickApply/Build_Gradle_Test_IMG.png)
 ![Demo Screenshot 2](./screenshots/demo2.png)
 
 ## Features
