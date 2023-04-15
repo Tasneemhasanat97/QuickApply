@@ -1,10 +1,11 @@
 import java.util.Scanner;
 
 public class Main {
+    private static QuickApply quickApply;
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        QuickApply quickApply = QuickApply.getInstance();
-
+        QuickApplyFactory quickApplyFactory = new QuickApplyFactory();
+        quickApply = quickApplyFactory.createQuickApply();
         System.out.println("Welcome to QuickApply!");
 
         while (true) {
@@ -69,14 +70,14 @@ public class Main {
         String gpa = scanner.nextLine();
 
         Student student = new Student(email, name, satScore, gpa);
-        QuickApply.getInstance().addStudent(student);
+        quickApply.addStudent(student);
 
         System.out.println("Profile created successfully!");
     }
 
     private static void viewColleges() {
         System.out.println("\nAvailable colleges:");
-        for (College college : QuickApply.getInstance().getAllColleges()) {
+        for (College college : quickApply.getAllColleges()) {
             System.out.println("College: " + college.getName());
             System.out.println("Admissions Requirements:");
             System.out.println("  SAT Score: " + college.getAdmissions().getSatScoreRequirement());
@@ -93,9 +94,9 @@ public class Main {
         System.out.print("Enter the program name: ");
         String programName = scanner.nextLine();
     
-        Student student = QuickApply.getInstance().getStudent(email);
+        Student student = quickApply.getStudent(email);
         Application application = new Application(student, collegeName, programName);
-        QuickApply.getInstance().addApplication(application);
+        quickApply.addApplication(application);
     
         System.out.println("Application submitted successfully!");
     }

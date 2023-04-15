@@ -4,8 +4,6 @@ import java.util.List;
 import java.util.Map;
 
 public class QuickApply {
-    private static QuickApply instance;
-
     private Map<String, College> colleges;
     private Map<String, String> users;
     private Map<String, Student> students;
@@ -14,7 +12,7 @@ public class QuickApply {
         return new ArrayList<>(colleges.values());
     }
 
-    private QuickApply() {  
+    QuickApply() {  
         this.colleges = new HashMap<>();
         this.users = new HashMap<>();
         this.students = new HashMap<>();
@@ -22,13 +20,6 @@ public class QuickApply {
         // Add some example colleges
         addExampleColleges();
         
-    }
-
-    public static QuickApply getInstance() {
-        if (instance == null) {
-            instance = new QuickApply();
-        }
-        return instance;
     }
 
     public void addCollege(College college) {
