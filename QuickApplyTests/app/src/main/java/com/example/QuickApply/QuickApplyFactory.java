@@ -1,6 +1,6 @@
 package com.example.QuickApply;
 public class QuickApplyFactory {
-    public QuickApply createQuickApply() {
+    public IQuickApply createQuickApply() {
         return new QuickApply();
     }
 }

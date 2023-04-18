@@ -2,7 +2,7 @@ package com.example.QuickApply;
 import java.util.Scanner;
 
 public class Main {
-    private static QuickApply quickApply;
+    private static IQuickApply quickApply;
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         QuickApplyFactory quickApplyFactory = new QuickApplyFactory();

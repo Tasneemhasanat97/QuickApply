@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class QuickApply {
+public class QuickApply implements IQuickApply {
     private Map<String, College> colleges;
     private Map<String, String> users;
     private Map<String, Student> students;
