@@ -7,6 +7,7 @@ public class Main {
         QuickApplyFactory quickApplyFactory = new QuickApplyFactory();
         quickApply = quickApplyFactory.createQuickApply();
         System.out.println("Welcome to QuickApply!");
+        System.out.println("test");
 
         while (true) {
             System.out.println("1. Login");
